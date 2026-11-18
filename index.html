@@ -1897,7 +1897,6 @@ async function renderDesignCanvas(){
   ctx.imageSmoothingEnabled=false;
   ctx.drawImage(qrImg,qrX,qrY,qrSize,qrSize);
   ctx.imageSmoothingEnabled=true;
-  drawGoogleOutline(ctx,qrX,qrY,qrSize,5*ratio);
  }
 
  if(!hiddenItems.nfc)await drawNFCButton(ctx,ratio);
