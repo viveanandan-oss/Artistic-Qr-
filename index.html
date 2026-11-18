@@ -1903,7 +1903,7 @@ async function renderDesignCanvas(){
 
  if(!hiddenItems.qr){
   const qrImg=await loadImage(qrData);
-  const qrSize=2*PRINT_DPI;
+  const qrSize=1.5*PRINT_DPI;
   const qrX=PRINT_W*qrPosX/100-qrSize/2;
   const qrY=PRINT_H*qrPosY/100-qrSize/2;
   ctx.fillStyle="#ffffff";
