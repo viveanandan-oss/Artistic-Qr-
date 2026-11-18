@@ -454,7 +454,23 @@ textarea{min-height:75px;resize:vertical}
 <button class="action" onclick="moveThanks(-2)">Move Up</button>
 <button class="action" onclick="moveThanks(2)">Move Down</button>
 </div>
+<h3>QR Code Position</h3>
+<p class="small">Drag the QR code anywhere in the Live Print Preview, or use the buttons below for fine adjustment.</p>
+<div class="qr-move-grid">
+<span></span>
+<button class="action" onclick="moveQR(0,-1)" aria-label="Move QR up">Up</button>
+<span></span>
+<button class="action" onclick="moveQR(-1,0)" aria-label="Move QR left">Left</button>
+<button class="action yellow" onclick="resetQR()">Centre</button>
+<button class="action" onclick="moveQR(1,0)" aria-label="Move QR right">Right</button>
+<span></span>
+<button class="action" onclick="moveQR(0,1)" aria-label="Move QR down">Down</button>
+<span></span>
+</div>
 
+<label for="qrSize">QR Size: <span id="qrSizeValue">100</span>%</label>
+<input type="range" id="qrSize" min="50" max="100" step="1" value="100" oninput="updateEditor()">
+<p class="small">Reduce the QR size without changing its source image.</p>
 <hr>
 
 <h3>QR Code Position</h3>
