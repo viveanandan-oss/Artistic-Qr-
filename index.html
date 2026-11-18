@@ -990,9 +990,14 @@ function updateEditor(){
  [notePosX,notePosY]=placeItem(document.getElementById("previewNote"),notePosX,notePosY);
 
  clampQR();
- const qr=document.getElementById("editorQR");
- qr.style.left=qrPosX+"%";
- qr.style.top=qrPosY+"%";
+const qrSizePercent = Number(document.getElementById("qrSize").value);
+document.getElementById("qrSizeValue").textContent = qrSizePercent;
+
+const qr = document.getElementById("editorQR");
+qr.style.width = (50 * qrSizePercent / 100) + "%";
+qr.style.height = (33.3333 * qrSizePercent / 100) + "%";
+qr.style.left = qrPosX + "%";
+qr.style.top = qrPosY + "%";
 
  clampNFC();
  nfc.style.left=nfcPosX+"%";
